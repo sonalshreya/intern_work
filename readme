@@ -1,0 +1,32 @@
+#making_list_using_heuristics_shr.py - 
+This program will split the sentences into groups. English groups with there corresponding hindi groups. 
+
+RUN: python making_list_using_heuristics_shr.py <input_csv> <output_group_file>
+
+EX: python /home/user/Downloads/making_list_using_heuristics_shr.py /home/user/anu_output/ai1E_tmp_11_nov/ai1E_tmp/2.15/srun_All_Resources_id_word.csv /home/user/anu_output/ai1E_tmp_11_nov/ai1E_tmp/2.15/output_group_file 
+
+Once we have got the grouping information in the group file, run the multiword alignment code on this output file.
+#meaning_of_every_word_shreya.py -
+This program will give the meaning of every word in the group
+
+RUN: python <meaning_of_every_word_shreya.py> <output_froup_file> <single word computer science dict> <output dictionary>
+
+Ex:python /home/user/Downloads/meaning_of_every_word_shreya.py /home/user/anu_output/ai1E_tmp_11_nov/ai1E_tmp/2.26/output_group_file /home/user/anusaaraka/Anu_data/domain/computer_science_dic.txt /home/user/anu_output/ai1E_tmp_11_nov/ai1E_tmp/2.26/sample2
+
+The sample2 will contain the meaning of every word
+
+#all_words_using_apertium.py - 
+This program gives two outputs, one with word ids, english words and its corresponding hindi meaning,and other is only english words or groups with corresponding hindi meanings.
+
+RUN: python <all_words_using_apertium.py> <word.dat> <All_apertium.py> <output_with_id> <output_without_id>
+
+EX: python /home/user/Downloads/all_words_using_apertium.py /home/user/tmp_anu_dir/tmp/ai1E_tmp1/2.11/word.dat /home/user/tmp_anu_dir/tmp/ai1E_tmp1/2.11/id_Apertium_output_with_grp.dat /home/user/tmp_anu_dir/tmp/ai1E_tmp1/2.11/group_with_id /home/user/tmp_anu_dir/tmp/ai1E_tmp1/2.11/group_without_id
+
+output_file_with_id is used in csv creation and the second output is sent as input to meaning_of_every_word_shreya.py 
+
+#once we have got output of thses two programs:
+all_words_using_apertium.py and meaning_of_every_word_shreya.py 
+
+Then we write a shell program to seperate first column of first output file of all_words_using_apertium.py and join it with the second column of output we get from meaning_of_every_word_shreya.py 
+
+Then this output is sent to creation_csv.py
