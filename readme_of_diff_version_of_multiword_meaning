@@ -4,3 +4,4 @@ RUN : python /home/user/Downloads/multiword_alignment_dictionary_final_roja.py <
 meaning_of_every_word_shreya.py - This code also gives meaning of every word in multiword, but if it doesnt finds the same meaning in dictionary, it propooses the remaining words from the wx format to the remaining english word. It says that we couldn't find the meaning in in put dictionary but this may be the meaning of this word.
 RUN: RUN : python <meaning_of_every_word.py> <input_file_with_english_multiword and its corresponding meaning in wx format> <input_dictionary> <output_file>
 
+Bracket_issue.py - In this program the dictionary is cleaned by removing information and making it as a seperate entry in dictionary in sorted form.
